@@ -1,0 +1,113 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <h2> CGPA CALCULATOR</h2>
+        </div>
+        <div class="sem">
+            <form> 
+                <div>
+                    <label>Sem1 &nbsp; &nbsp; &nbsp;</label>
+                    <input type="text" name=""  id="first" placeholder="1st Sem SGPA"/>
+                </div>
+                 <div>
+                    <label>Sem2 &nbsp; &nbsp; &nbsp;</label>
+                    <input type="text" name=""  id="second" placeholder="2nd Sem SGPA"/>
+                </div>
+                 <div>
+                    <label>Sem3 &nbsp; &nbsp; &nbsp;</label>
+                    <input type="text" name=""  id="third" placeholder="3rd Sem SGPA"/>
+                </div>
+                <div>
+                    <label>Sem4 &nbsp; &nbsp; &nbsp;</label>
+                    <input type="text" name=""  id="fourth" placeholder="4th Sem SGPA"/>
+                </div>
+                <div>
+                    <label>Sem5 &nbsp; &nbsp; &nbsp;</label>
+                    <input type="text" name=""  id="fifth" placeholder="5th Sem SGPA"/>
+                </div>
+                <div>
+                    <label>Sem6 &nbsp; &nbsp; &nbsp;</label>
+                    <input type="text" name=""  id="sixth" placeholder="6th Sem SGPA"/>
+                </div>
+                <div>
+                    <label>Sem7 &nbsp; &nbsp; &nbsp;</label>
+                    <input type="text" name=""  id="seventh" placeholder="7th Sem SGPA"/>
+                </div>
+                 <div>
+                    <label>Sem8 &nbsp; &nbsp; &nbsp;</label>
+                    <input type="text" name=""  id="eight" placeholder="8th Sem SGPA"/>
+                </div>
+                <button type="reset" id="reset">Reset</button>
+                <button type="button" onclick="cgpacalculation();" id="calculate">Calculate</button>
+                <div id="results">
+                    <input type="text" id="result" placeholder="Result"/>
+                </div>
+            </form>
+        </div>
+        <script>
+            function cgpacalculation()
+        {   
+            var a=parseFloat(document.getElementById("first").value);
+            var b=parseFloat(document.getElementById("second").value);
+            var c=parseFloat(document.getElementById("third").value);
+            var d=parseFloat(document.getElementById("fourth").value);
+            var e=parseFloat(document.getElementById("fifth").value);
+            var f=parseFloat(document.getElementById("sixth").value);
+            var g=parseFloat(document.getElementById("seventh").value);
+            var h=parseFloat(document.getElementById("eight").value);
+            // var cgpa=((a*26)+(b*25)+(c*25)+(d*26)+(e*25)+(f*26)+(g*24)+(h*23))/200.0;
+            var num=0,dno=0;
+            if(isFinite(a) )
+            {
+                num=num+a*26;
+                dno=dno+26;
+            }
+            if(isFinite(b))
+            {
+                num=num+b*25;
+                dno=dno+25;
+            }
+            if(isFinite(c))
+            {
+                num=num+c*25;
+                dno=dno+25;
+            }
+            if(isFinite(d))
+            {
+                num=num+d*26;
+                dno=dno+26;
+            }
+            if(isFinite(e))
+            {
+                num=num+e*25;
+                dno=dno+25;
+            }
+            if(isFinite(f))
+            {
+                num=num+f*26;
+                dno=dno+26;
+            }
+            if(isFinite(g))
+            {
+                num=num+g*24;
+                dno=dno+24;
+            }
+            if(isFinite(h))
+            {
+                num=num+h*23;
+                dno=dno+23;
+            }
+            cgpa=num/dno;
+            document.getElementById("result").value=cgpa.toFixed(2);
+
+            
+        }
+        
+        
+        
+        </script>
+    </body>
+</html>
